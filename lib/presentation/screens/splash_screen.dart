@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../services/supabase_service.dart';
+import '../widgets/common/mo_logo.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
@@ -31,28 +32,25 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 120, height: 120,
-            decoration: BoxDecoration(
-              color: AppColors.gold.withOpacity(0.1),
-              shape: BoxShape.circle,
-              border: Border.all(color: AppColors.gold, width: 2),
-            ),
-            child: const Icon(Icons.quiz_rounded, size: 60, color: AppColors.gold),
-          ).animate().scale(duration: 600.ms, curve: Curves.elasticOut),
-          const SizedBox(height: 24),
+          const MoLogo(size: 140, showTagline: false)
+            .animate().scale(duration: 600.ms, curve: Curves.elasticOut),
+          const SizedBox(height: 28),
           const Text('Preguntados',
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700,
-              color: AppColors.textPrimary))
+            style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700,
+              color: AppColors.textPrimary, letterSpacing: 1))
             .animate(delay: 300.ms).fadeIn().slideY(begin: 0.3, end: 0),
           const Text('Milton Ochoa',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500,
-              color: AppColors.gold, letterSpacing: 3))
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,
+              color: AppColors.accent, letterSpacing: 3))
             .animate(delay: 500.ms).fadeIn().slideY(begin: 0.3, end: 0),
+          const Text('Expertos en Evaluación',
+            style: TextStyle(fontSize: 11, fontWeight: FontWeight.w400,
+              color: AppColors.textSecondary, letterSpacing: 2))
+            .animate(delay: 650.ms).fadeIn(),
           const SizedBox(height: 48),
-          const SizedBox(width: 32, height: 32,
+          const SizedBox(width: 28, height: 28,
             child: CircularProgressIndicator(
-              strokeWidth: 2, color: AppColors.gold))
+              strokeWidth: 2, color: AppColors.accent))
             .animate(delay: 800.ms).fadeIn(),
         ],
       ),
