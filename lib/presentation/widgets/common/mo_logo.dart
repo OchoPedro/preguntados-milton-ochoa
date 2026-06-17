@@ -12,101 +12,46 @@ class MoLogo extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
+        Image.asset(
+          'assets/images/logo_mo.png',
           width: size,
-          height: size,
-          decoration: BoxDecoration(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(size * 0.15),
-          ),
-          child: Center(
-            child: CustomPaint(
-              size: Size(size * 0.72, size * 0.72),
-              painter: _MoLogoPainter(),
-            ),
-          ),
+          height: size * 0.78,
+          fit: BoxFit.contain,
         ),
         if (showTagline) ...[
-          SizedBox(height: size * 0.12),
+          SizedBox(height: size * 0.08),
           Text(
-            'Milton Ochoa',
+            'Preguntados',
             style: TextStyle(
               fontFamily: 'Poppins',
-              fontSize: size * 0.175,
+              fontSize: size * 0.2,
               fontWeight: FontWeight.w700,
               color: AppColors.textPrimary,
               letterSpacing: 0.5,
             ),
           ),
           Text(
+            'Milton Ochoa',
+            style: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: size * 0.13,
+              fontWeight: FontWeight.w500,
+              color: AppColors.accent,
+              letterSpacing: 2.5,
+            ),
+          ),
+          Text(
             'Expertos en Evaluación',
             style: TextStyle(
               fontFamily: 'Poppins',
-              fontSize: size * 0.1,
+              fontSize: size * 0.085,
               fontWeight: FontWeight.w400,
               color: AppColors.textSecondary,
-              letterSpacing: 1.2,
+              letterSpacing: 1.5,
             ),
           ),
         ],
       ],
     );
   }
-}
-
-class _MoLogoPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = size.width * 0.095
-      ..strokeCap = StrokeCap.round;
-
-    // M letter (left side)
-    final mPath = Path();
-    mPath.moveTo(size.width * 0.0, size.height * 0.75);
-    mPath.lineTo(size.width * 0.0, size.height * 0.18);
-    mPath.quadraticBezierTo(
-      size.width * 0.0, size.height * 0.0,
-      size.width * 0.18, size.height * 0.0,
-    );
-    mPath.quadraticBezierTo(
-      size.width * 0.36, size.height * 0.0,
-      size.width * 0.36, size.height * 0.18,
-    );
-    mPath.lineTo(size.width * 0.36, size.height * 0.75);
-    canvas.drawPath(mPath, paint);
-
-    // O letter with exclamation (right side)
-    final center = Offset(size.width * 0.72, size.height * 0.38);
-    final radius = size.width * 0.26;
-    canvas.drawArc(
-      Rect.fromCircle(center: center, radius: radius),
-      -2.4,
-      5.4,
-      false,
-      paint,
-    );
-
-    // Exclamation dot inside O
-    final dotPaint = Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.fill;
-    canvas.drawCircle(
-      Offset(size.width * 0.72, size.height * 0.38),
-      size.width * 0.05,
-      dotPaint,
-    );
-
-    // Exclamation line
-    canvas.drawLine(
-      Offset(size.width * 0.72, size.height * 0.18),
-      Offset(size.width * 0.72, size.height * 0.28),
-      paint..strokeWidth = size.width * 0.06,
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
