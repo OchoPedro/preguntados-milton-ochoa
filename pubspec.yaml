@@ -1,0 +1,80 @@
+name: preguntados_milton_ochoa
+description: Juego de trivia multijugador en tiempo real - Milton Ochoa
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Supabase
+  supabase_flutter: ^2.3.0
+
+  # State management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # Auth
+  google_sign_in: ^6.2.1
+
+  # Firebase (Push Notifications)
+  firebase_core: ^2.27.0
+  firebase_messaging: ^14.7.15
+
+  # UI
+  flutter_animate: ^4.5.0
+  lottie: ^3.1.0
+  cached_network_image: ^3.3.1
+  percent_indicator: ^4.2.3
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.9
+  gap: ^3.0.1
+  animated_text_kit: ^4.2.2
+  confetti: ^0.7.0
+
+  # Utils
+  shared_preferences: ^2.2.2
+  intl: ^0.19.0
+  http: ^1.2.0
+  uuid: ^4.3.3
+  equatable: ^2.0.5
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+
+  # Image
+  image_picker: ^1.0.7
+  flutter_image_compress: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.3.9
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/lottie/
+    - assets/fonts/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
