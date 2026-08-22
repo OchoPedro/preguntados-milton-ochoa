@@ -39,14 +39,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
             style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700,
               color: AppColors.textPrimary, letterSpacing: 1))
             .animate(delay: 300.ms).fadeIn().slideY(begin: 0.3, end: 0),
-          const Text('Milton Ochoa',
+          const Text('Grupo Milton Ochoa',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,
               color: AppColors.accent, letterSpacing: 3))
             .animate(delay: 500.ms).fadeIn().slideY(begin: 0.3, end: 0),
-          const Text('Expertos en Evaluación',
-            style: TextStyle(fontSize: 11, fontWeight: FontWeight.w400,
-              color: AppColors.textSecondary, letterSpacing: 2))
-            .animate(delay: 650.ms).fadeIn(),
           const SizedBox(height: 48),
           const SizedBox(width: 28, height: 28,
             child: CircularProgressIndicator(

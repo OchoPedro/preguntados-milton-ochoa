@@ -11,7 +11,7 @@ class PreguntadosApp extends ConsumerWidget {
     final router = ref.watch(routerProvider);
 
     return MaterialApp.router(
-      title: 'Preguntados Milton Ochoa',
+      title: 'Preguntados Grupo Milton Ochoa',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       routerConfig: router,

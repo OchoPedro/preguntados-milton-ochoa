@@ -31,23 +31,13 @@ class MoLogo extends StatelessWidget {
             ),
           ),
           Text(
-            'Milton Ochoa',
+            'Grupo Milton Ochoa',
             style: TextStyle(
               fontFamily: 'Poppins',
               fontSize: size * 0.13,
               fontWeight: FontWeight.w500,
               color: AppColors.accent,
               letterSpacing: 2.5,
-            ),
-          ),
-          Text(
-            'Expertos en Evaluación',
-            style: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: size * 0.085,
-              fontWeight: FontWeight.w400,
-              color: AppColors.textSecondary,
-              letterSpacing: 1.5,
             ),
           ),
         ],

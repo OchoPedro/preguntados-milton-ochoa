@@ -1,6 +1,6 @@
-# Preguntados Milton Ochoa
+# Preguntados Grupo Milton Ochoa
 
-Juego de trivia multijugador en tiempo real para la empresa Milton Ochoa.
+Juego de trivia multijugador en tiempo real para la empresa Grupo Milton Ochoa.
 
 ## Stack
 
@@ -84,7 +84,7 @@ lib/
 ├── app.dart                     # MaterialApp + router
 ├── core/
 │   ├── constants/
-│   │   ├── app_colors.dart      # Paleta de colores Milton Ochoa
+│   │   ├── app_colors.dart      # Paleta de colores Grupo Milton Ochoa
 │   │   └── app_constants.dart   # Config del juego (puntos, tiempos, etc.)
 │   ├── theme/app_theme.dart     # ThemeData oscuro
 │   ├── router/app_router.dart   # GoRouter con guards de auth

@@ -1,11 +1,11 @@
 {
-    "name": "Preguntados Milton Ochoa",
+    "name": "Preguntados Grupo Milton Ochoa",
     "short_name": "Preguntados MO",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#060F1E",
     "theme_color": "#0A1F3D",
-    "description": "El juego de trivia competitivo de Milton Ochoa",
+    "description": "El juego de trivia competitivo de Grupo Milton Ochoa",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

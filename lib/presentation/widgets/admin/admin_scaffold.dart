@@ -78,7 +78,7 @@ class _AdminDrawer extends StatelessWidget {
               const Text('Panel Admin',
                 style: TextStyle(color: AppColors.textPrimary,
                   fontSize: 18, fontWeight: FontWeight.w700)),
-              const Text('Preguntados Milton Ochoa',
+              const Text('Preguntados Grupo Milton Ochoa',
                 style: TextStyle(color: AppColors.textHint, fontSize: 11)),
             ],
           ),
